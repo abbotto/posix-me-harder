@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://posix-me-harder.com/</loc>
+    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
+    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://posix-me-harder.com/docs/</loc>
+    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
+    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://posix-me-harder.com/download/</loc>
+    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
+    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://posix-me-harder.com/license/</loc>
+    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
+    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://posix-me-harder.com/usage/</loc>
+    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
+    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+</urlset>

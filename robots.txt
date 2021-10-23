@@ -1,0 +1,12 @@
+User-agent: *
+
+Disallow: /.gitignore
+Disallow: /asset/font/
+Disallow: /asset/html/
+Disallow: /asset/script/
+Disallow: /asset/style/
+Disallow: /CNAME
+
+Crawl-delay: 5
+
+Sitemap: https://posix-me-harder.com/sitemap.xml

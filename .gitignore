@@ -1,0 +1,23 @@
+# Ignore everything by default
+*
+
+# Descend into directories
+!**/
+
+# Allow
+!.gitignore
+!/asset/**/*
+!/docs/**/*
+!/download/**/*
+!/license/**/*
+!/usage/**/*
+!404.html
+!CNAME
+!favicon.ico
+!index.html
+!robots.txt
+!sitemap.xml
+
+# Deny
+.DS_Store
+log.txt
