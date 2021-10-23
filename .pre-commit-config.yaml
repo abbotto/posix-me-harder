@@ -1,0 +1,49 @@
+default_stages: [commit, manual]
+
+repos:
+  - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+    rev: v5.0.0
+    hooks:
+      - id: commitlint
+        language: node
+        entry: commitlint --edit --config ./test/config/commit.json
+        stages: [commit-msg]
+        additional_dependencies: ["@commitlint/config-conventional"]
+
+  - repo: "https://github.com/pre-commit/pre-commit-hooks"
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-json
+      - id: check-yaml
+      - id: end-of-file-fixer
+
+  - repo: local
+    hooks:
+      - id: shell-format
+        name: Formatting scripts
+        description: This hook formats shell scripts with 'shfmt'.
+        entry: dev/util/format.sh
+        language: system
+        stages: [manual]
+
+  - repo: local
+    hooks:
+      - id: shell-lint
+        name: Linting scripts
+        description: This hook lints shell scripts with 'shellcheck'.
+        entry: test/util/lint.sh
+        language: system
+        stages: [commit, manual]
+
+  - repo: local
+    hooks:
+      - id: shell-test
+        name: Testing scripts
+        description: This hook tests the 'posix-me-harder' script.
+        entry: test/util/spec.sh
+        language: system
+        verbose: true
+        stages: [manual]
