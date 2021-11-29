@@ -1,0 +1,15 @@
+# Ignore everything by default
+*
+
+# Descend into directories
+!**/
+
+# Allow
+!.gitignore
+
+!/config/**/*
+!/spec/**/*
+!/util/**/*
+
+# Deny
+.DS_Store
