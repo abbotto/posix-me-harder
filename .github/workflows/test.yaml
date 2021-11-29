@@ -1,0 +1,35 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - deploy-*
+      - edge
+      - main
+
+jobs:
+  Check-for-issues:
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, macos-11]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+
+      - name: Install dependencies
+        run: |
+          ./dev/util/packages.sh
+          pip install pre-commit
+
+      - name: Run linting tests
+        run: |
+          pre-commit run check-added-large-files --all-files --verbose
+          pre-commit run check-case-conflict --all-files --verbose
+          pre-commit run check-merge-conflict --all-files --verbose
+          pre-commit run check-json --all-files --verbose
+          pre-commit run check-yaml --all-files --verbose
+          ./test/util/lint.sh
+
+      - name: Run script tests
+        run: ./test/util/spec.sh
