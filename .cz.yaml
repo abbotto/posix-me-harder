@@ -1,7 +1,7 @@
 commitizen:
   annotated_tag: true
-  bump_message: "chore: release ($new_version)"
+  bump_message: 'chore: release ($new_version)'
   update_changelog_on_bump: true
-  version: 0.0.0
+  version: 0.0.1
   version_files:
-    - .version
+  - .version
